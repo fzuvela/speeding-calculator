@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&family=Roboto:ital,wght@0,300;0,500;1,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Speeding calculator</title>
+  <link rel="stylesheet" type="text/css" href="./styles/stil.css" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+    />
+</head>
+<body>
+<div id="wrapper">
+<div id="window">
+<div id="container" class="text">
+ <h1 class="text" id="title">Speeding calculator</h1>
+ <p class="text" id="subtext">Do you want to know how much time you save by speeding? Find out with this calculator.</p>
+
+ <div id="selection">
+ <select class="units">
+  <option disabled selected>Choose units</option>
+  <option value="kilometres">Kilometres</option>
+  <option value="miles">Miles</option>
+ </select>
+ </div>
+
+ <div class="input">
+  <form>
+   <label for="drivingdistance">Driving distance</label>
+     <input 
+     min="0" 
+     type="number" 
+     id="drivingdistance"
+     placeholder="Enter the distance" 
+     class="distance"
+     value="100"
+     required
+     />
+   </form>
+   <span id="addon"></span>
+ </div>
+
+ <div class="input">
+  <form>
+    <label for="speedlimit">Speed limit</label>
+    <input 
+    min="0" 
+    type="number" 
+    id="speedlimit"
+    placeholder="Enter the speed limit" 
+    value="80"
+    required
+    />
+  </form>
+  <span id="addon2"></span>
+ </div>
+
+ <div class="input">
+  <form id="last">
+  <label for="drivingspeed">Driving speed</label>
+    <input min="0" 
+    type="number" 
+    id="drivingspeed"
+    placeholder="Enter the driving speed" 
+    value="120"
+    required
+    />
+  </form>
+  <span id="addon3"></span>
+ </div>
+
+ <div class="btn"><button class="btncontent" onclick="handleButtonClick()">Calculate</button></div>
+</div>
+
+<div id="top">
+<div id="notification" class="text">
+  <span id="left"></span><span id="right"></span>
+</div>
+</div>
+
+<script src="./js/skripta.js"></script>
+</div>
+</div>
+</body>
+
+<footer>
+  <div id="footer-box" class="container">
+    <ul id="social-media-list">
+      <li title="Facebook">
+        <a
+          class="social-media-links"
+          href="https://www.facebook.com/"
+          target="_blank"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li title="Instagram">
+        <a
+          class="social-media-links"
+          href="https://www.instagram.com/"
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <li title="Email">
+        <a class="social-media-links" href="mailto:fzuvela@fesb.hr">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    </ul>
+    <p id="copyright">
+      &copy;<em> 2022, All rights reserved</em> <br />
+      <strong>Frane Žuvela</strong>
+    </p>
+  </div>
+</footer>
+</html>
